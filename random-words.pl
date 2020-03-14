@@ -1,11 +1,10 @@
 #!/usr/bin/env perl
 # by William Hofferbert
-#
 
 use 5.010;				# say
 use strict;				# good form
 use warnings;				# know when stuff is wrong
-use Data::Dumper;			# debug
+#use Data::Dumper;			# debug
 use File::Basename;			# know where the script lives
 use Getopt::Long;			# handle arguments
 use IO::All;				# io
