@@ -55,6 +55,12 @@ List::Util qw(shuffle)
 
 # Examples
 
+## Random words with an input list
+
+Notice that the input words are recycled.
+
+Words from the main list are not recycled.
+
 ```
 $ ./random-words.pl -n 3 -l 10 random test words and stuff "notice the" "odd things" "that happen here"
 Marring Stuff Dirge
@@ -69,6 +75,29 @@ Unobstructed Brownstone Stuff
 Agassi That Happen Here Cadaverous
 $
 ```
+
+## Weighted input
+
+If you weight the input list more heavily, then that many input words will be incorporated into the output lines.
+
+```bash
+$ ./random-words.pl -n 6 -l 10 -i 3 pancakes bananas cats guitars tricycles midi keyboard sword "13W 5000k LED High-Efficiency Lamp" garbage plate caffeine
+Guitars Homewrecker's Plate Manuela Stile's Garbage
+Mismanage Caffeine Interconnection's Sword 13W 5000k LED High-Efficiency Lamp Globule's
+Sword éTude's Knife's Midi Prevails Caffeine
+Bananas Echo's Refillable Frown's Sword Guitars
+Pancakes Resemble Unknown Aspidiske's Sword Plate
+Campinas Keyboard Eon Elbowing Pancakes 13W 5000k LED High-Efficiency Lamp
+Sword Bananas Protoplasmic Grab Garry Tricycles
+Larsen Plate Sword Urination Midi Offloads
+Circling Guitars Policyholder Garbage Tush Cats
+Suitor Gaines's Tatar's Pancakes Midi 13W 5000k LED High-Efficiency Lamp
+$
+```
+
+## Long lists
+
+Request a vast list of random words for inspiration or whatever.
 
 ```
 $ ./random-words.pl -n 4 -l 100
