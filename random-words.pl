@@ -35,19 +35,15 @@ sub usage {
 
   Options:
 
-    -n
     -number [int]
       A number of words to output. Default is $numWords.
 
-    -l
     -lines [int]
       A number of lines to print. Default is $numLines.
 
-    -i
     -in-weight [int]
       How heavily to weight the input terms. Default is $inWeight.
 
-    -d
     -dict [/path/to/dictionary]
       Provide a path to a dictionary to use.
       Default is $dict
@@ -57,12 +53,16 @@ sub usage {
 
   Examples:
 
-    $prog 
+    # Generate one random word from $dict
+      $prog 
+
+    # All options may combined/shortened, and input words provided:
+      $prog -n 4 -l 10 -i 2 one two three "quoted pair" another\\ quoted\\ pair
 
   END_USAGE
   chomp $usage;
   say $usage;
-  exit(0);
+  exit 0;
 }
 
 sub check_required_args {		# handle leftover @ARGV stuff here if need be
