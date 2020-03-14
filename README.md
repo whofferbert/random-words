@@ -1,6 +1,18 @@
 # random-words
 Selectable amounts of random dict words, with an optional variable weighted list of input words.
 
+By default, this program looks at /usr/share/dict/words as it's line delimited list of random words to work from.
+
+If you are on a system without the default dictionary file, you can use the -dict argument to point the program to your own file for use.
+
+### Requirements
+
+```bash
+Perl 5.010
+IO::All
+List::Util qw(shuffle)
+```
+
 # help text
 
 ```bash
